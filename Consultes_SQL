@@ -107,3 +107,4 @@
 -----------1.1.8 Subconsultas (En la cláusula HAVING)
 /*7*/SELECT fabricante.nombre FROM fabricante JOIN producto ON fabricante.codigo=producto.codigo_fabricante GROUP BY fabricante.nombre
 HAVING COUNT(producto.nombre) = (SELECT COUNT(producto.nombre) FROM producto, fabricante WHERE fabricante.nombre LIKE 'Lenovo' AND fabricante.codigo=producto.codigo_fabricante);
+----Fin
